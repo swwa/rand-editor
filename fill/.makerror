@@ -1,0 +1,106 @@
+[7m/bin/make [m
+gcc -Wall    -target sun4 -o fill fill.c 
+fill.c: In function main:
+fill.c:157: warning: return-type defaults to `int'
+fill.c:166: warning: implicit declaration of function `getprogname'
+fill.c:172: warning: implicit declaration of function `getoptions'
+fill.c:177: warning: implicit declaration of function `filterfiles'
+fill.c:190: warning: implicit declaration of function `dohere'
+fill.c:192: warning: implicit declaration of function `exit'
+fill.c:193: warning: control reaches end of non-void function
+fill.c: In function dohere:
+fill.c:197: warning: return-type defaults to `int'
+fill.c:207: warning: implicit declaration of function `fprintf'
+fill.c:231: warning: control reaches end of non-void function
+fill.c: In function getprogname:
+fill.c:235: warning: return-type defaults to `int'
+fill.c:246: warning: implicit declaration of function `cmpstr'
+fill.c:249: warning: control reaches end of non-void function
+fill.c: In function cmpstr:
+fill.c:253: warning: return-type defaults to `int'
+fill.c: In function getoptions:
+fill.c:263: warning: return-type defaults to `int'
+fill.c:263: warning: type of `check_only' defaults to `int'
+fill.c:271: warning: `return' with no value, in function returning non-void
+fill.c:282: warning: `return' with no value, in function returning non-void
+fill.c:319: warning: implicit declaration of function `fflush'
+fill.c:326: warning: control reaches end of non-void function
+fill.c: In function filterfiles:
+fill.c:329: warning: return-type defaults to `int'
+fill.c:329: warning: type of `check_only' defaults to `int'
+fill.c:334: warning: implicit declaration of function `filter'
+fill.c:335: warning: `return' with no value, in function returning non-void
+fill.c:344: warning: `return' with no value, in function returning non-void
+fill.c:349: warning: implicit declaration of function `access'
+fill.c:377: warning: control reaches end of non-void function
+fill.c: In function filter:
+fill.c:380: warning: return-type defaults to `int'
+fill.c:381: warning: implicit declaration of function `intss'
+fill.c:383: warning: implicit declaration of function `doit'
+fill.c:385: warning: implicit declaration of function `fclose'
+fill.c:387: warning: implicit declaration of function `rewind'
+fill.c:389: warning: control reaches end of non-void function
+fill.c: In function doit:
+fill.c:395: warning: return-type defaults to `int'
+fill.c:415: warning: implicit declaration of function `getword'
+fill.c:416: warning: implicit declaration of function `finish'
+fill.c:417: warning: `return' with no value, in function returning non-void
+fill.c:420: warning: implicit declaration of function `_flsbuf'
+fill.c:431: warning: `return' with no value, in function returning non-void
+fill.c:435: warning: `return' with no value, in function returning non-void
+fill.c:440: warning: implicit declaration of function `putwords'
+fill.c:450: warning: `return' with no value, in function returning non-void
+fill.c:453: warning: control reaches end of non-void function
+fill.c: In function getword:
+fill.c:457: warning: return-type defaults to `int'
+fill.c:481: warning: implicit declaration of function `next'
+fill.c:493: warning: implicit declaration of function `getch'
+fill.c:538: warning: implicit declaration of function `doublesp'
+fill.c:610: warning: implicit declaration of function `addword'
+fill.c: In function next:
+fill.c:616: warning: return-type defaults to `int'
+fill.c:616: warning: type of `wordindex' defaults to `int'
+fill.c: In function prev:
+fill.c:622: warning: return-type defaults to `int'
+fill.c:622: warning: type of `wordindex' defaults to `int'
+fill.c: In function addword:
+fill.c:628: warning: return-type defaults to `int'
+fill.c:628: warning: type of `wordindex' defaults to `int'
+fill.c:636: warning: `return' with no value, in function returning non-void
+fill.c:648: warning: implicit declaration of function `hyonly'
+fill.c:673: warning: control reaches end of non-void function
+fill.c: In function hyonly:
+fill.c:677: warning: return-type defaults to `int'
+fill.c: In function putwords:
+fill.c:691: warning: return-type defaults to `int'
+fill.c:691: warning: type of `endparflg' defaults to `int'
+fill.c:701: warning: `return' with no value, in function returning non-void
+fill.c:703: warning: implicit declaration of function `justify'
+fill.c:735: warning: control reaches end of non-void function
+fill.c: In function justify:
+fill.c:739: warning: return-type defaults to `int'
+fill.c:745: warning: `return' with no value, in function returning non-void
+fill.c:753: warning: `return' with no value, in function returning non-void
+fill.c:763: warning: `return' with no value, in function returning non-void
+fill.c:800: warning: `return' with no value, in function returning non-void
+fill.c:826: warning: `return' with no value, in function returning non-void
+fill.c: In function finish:
+fill.c:831: warning: return-type defaults to `int'
+fill.c:837: warning: control reaches end of non-void function
+fill.c: In function getch:
+fill.c:841: warning: return-type defaults to `int'
+fill.c:843: warning: implicit declaration of function `_filbuf'
+fill.c: In function doublesp:
+fill.c:865: warning: return-type defaults to `int'
+fill.c: In function intss:
+fill.c:876: warning: return-type defaults to `int'
+fill.c:877: warning: implicit declaration of function `isatty'
+ln fill just
+gcc -Wall    -target sun4 -o center center.c 
+center.c:49: unterminated character constant
+center.c:397: warning: `/*' within comment
+center.c:398: warning: `/*' within comment
+center.c:400: warning: `/*' within comment
+center.c:401: warning: `/*' within comment
+*** Error code 1
+make: Fatal error: Command failed for target `center'

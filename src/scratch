@@ -1,0 +1,69 @@
+ˆˆˆˆ‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰
+From win Wed Feb 12 14:54:57 1992
+Return-Path: <win>
+Das EXABYTE-8500 l‰uft ohne Probleme!
+ssdddfvvvvv  ˆˆˆsvs
+center: "\374" char ignored.
+center: "\374" char ignored.
+a. Exabyte devices werden von Sun Microsystems nicht untersttzt! Da jedoch der Bedarf der Bentzer,
+   solche zu gebrauchen, stark vorhanden ist, wurde im file /sys/scsi/targets/st_conf.c ein entsprechender
+~~~provisorischer Eintrag gemacht. SUN OS 4.1.1 kennt beim booten jedoch nur EXABYTE 8200 (egal ob 8200 oder
+   8500).
+00000000000nnnnnnntttnn000
+b. Interessant ist jedoch folgendes Ph‰nomen: Im new command (Monitor mode) kann mit dem Befehl "probe-scsi"
+     vdeˆˆˆsdˆe
+sdf0000sdfdsfddd         fffffffffddda
+fsdfsdfsdfsdfsdfsdfssfdsf abgefragtSI-Schnittstelle abgefragtSI-Schnittstelle abgefragt werden. Hierbei wird jedes device nach seinem Namen gefragt!
+   Resultat: Unser EXABYTE 8500 melat: Unser EXABYTE 8500 melat: Unser EXABYTE 8500 meldet sich als EXABYTE 8500!!!!!
+Daraus ist zu schliessen, dass im SUN OS 4.1.1 der entsprechende Eintrag fehlt.
+                                   00
+
+d. Im dem Artikel der UNIGS, den wir ausgedruckt haben, wird das File st_conf.c frisiert! Es handelt sich 
+   hierbei lediglich um eine Erhˆhung der Kompression, also keine Behebung des dort erw‰hnten Problems !!!!
+
+Also Null Problemo; EXABYTE-8500 = O.K. 
+                    else wait for SUN OS 4.1.2 and hope .....
+                    END
+
+Bis bald     ^   ^ 
+             O   O
+               |
+             \___/      Keep smiling     BeniBunny
+
+
+
+From win Mon Feb 10 10:45:27 1992
+From daemon Mon Mar  2 13:51:10 1992
+Return-Path: <Mailer-Daemon>
+Received: by euusp0.saz.ch (4.1/SMI-4.1)
+	id AB02561; Mon, 2 Mar 92 13:51:08 +0100
+Date: Mon, 2 Mar 92 13:51:08 +0100
+From: Mailer-Daemon (Mail Delivery Subsystem)
+Subject: Returned mail: Host unknown
+Message-Id: <9203021251.AB02561@euusp0.saz.ch>
+To: ws
+Status: RO
+
+   ----- Transcript of session follows -----
+421 Host mailhost not found for mailer ether.
+550 chvax!wssaz... Host unknown
+
+   ----- Unsent message follows -----
+Return-Path: <ws>
+Received: by euusp0.saz.ch (4.1/SMI-4.1)
+	id AA02559; Mon, 2 Mar 92 13:51:08 +0100
+Date: Mon, 2 Mar 92 13:51:08 +0100
+From: ws (Walter Schweizer EUU1)
+Message-Id: <9203021251.AA02559@euusp0.saz.ch>
+To: chvax!wssaz
+Subject: Test
+
+Hallo,
+dies ist ein Test.
+
+
+
+Hallo
+Dies ist ein Test.
+Hier sieht man ob's geht.
+Wed Jun 29 10:01:34 MET DST 1994

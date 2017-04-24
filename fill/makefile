@@ -1,0 +1,36 @@
+CC      = gcc -traditional
+LIB     = /usr/local/etc
+BIN     = /usr/local/bin
+OWNER   = bin
+EXECS   = fill just center run
+SHELLSC = rb
+
+all:    $(EXECS)
+
+install:
+	cp $(EXECS) $(LIB)
+	cp $(SHELLSC) $(BIN)
+	cd $(LIB); chmod 755 $(EXECS); chown $(OWNER) $(EXECS)
+clean:
+	rm -f $(EXECS)
+clobber: clean
+	rm -f .es* *%
+
+just:   fill
+	ln fill just
+
+depend:
+	makedepend $(CFLAGS) *.c
+# DO NOT DELETE THIS LINE -- make depend depends on it.
+
+center.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+center.o: /usr/include/ctype.h /usr/include/features.h
+center.o: /usr/include/sys/cdefs.h /usr/include/sys/types.h
+center.o: /usr/include/linux/types.h /usr/include/asm/types.h
+center.o: /usr/include/sys/stat.h /usr/include/linux/stat.h
+fill.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h
+fill.o: /usr/include/ctype.h /usr/include/features.h /usr/include/sys/cdefs.h
+fill.o: /usr/include/sys/types.h /usr/include/linux/types.h
+fill.o: /usr/include/asm/types.h /usr/include/sys/stat.h
+fill.o: /usr/include/linux/stat.h
+run.o: /usr/include/stdio.h /usr/include/libio.h /usr/include/_G_config.h

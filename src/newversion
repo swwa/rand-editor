@@ -1,0 +1,9 @@
+ver=e.r.c
+
+string0="E19 version of `date`"
+string1="made in `pwd` by `whoami`"
+
+echo "short revision = -19;" > $ver
+echo 'char verstr[] = "\' >> $ver
+echo "$string0"'\n'\\ >> $ver
+echo "$string1"'\n";' >> $ver

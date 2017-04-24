@@ -1,0 +1,2 @@
+.if t .so /usr1/pd/rand/e19/doc/reference/eR/tmac.eRt
+.if n .so /usr1/pd/rand/e19/doc/reference/eR/tmac.eRn

@@ -1,0 +1,1378 @@
+.ds f. e.stdkey.tbl
+.ps 8
+.vs 10
+.if t \{\
+.TS
+.if \n+(b.=1 .nr d. \n(.c-\n(c.-1
+.de 35
+.ps \n(.s
+.vs \n(.vu
+.in \n(.iu
+.if \n(.u .fi
+.if \n(.j .ad
+.if \n(.j=0 .na
+..
+.nf
+.nr #~ 0
+.if n .nr #~ 0.6n
+.ds #d .d
+.if \(ts\n(.z\(ts\(ts .ds #d nl
+.fc
+.nr 33 \n(.s
+.rm 80 81 82 83 84
+.nr 80 0
+.nr 38 \w(extend)    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w+LINE       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w+PAGE       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w+SRCH       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w+TAB        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w+WORD       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w-LINE       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w-PAGE       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w-SRCH       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w-TAB        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w-WORD       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wALT         
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wBSP         
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wCHG WIN     
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wCLOSE       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wCMD         
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wCTRLCHAR    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wDELCHAR     
+.if \n(80<\n(38 .nr 80 \n(38
+.80
+.rm 80
+.nr 81 0
+.nr 38 \w ^X                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^F                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^R                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^Y                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^I                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^N                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^D                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^E                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^T                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^U                
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^B                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^A or ^_ or ^/    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^C                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^W                
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^V                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^A or NULL or ^@     
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^C                
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^W                   
+.if \n(81<\n(38 .nr 81 \n(38
+.81
+.rm 81
+.nr 82 0
+.nr 38 \w DOWN        
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ERASE       
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w HOME        
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w INSERT      
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w INT         
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w JOIN        
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w LEFT        
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w MARK        
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w OPEN        
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w PICK        
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w REPL        
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w RETURN      
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w RIGHT       
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w SPLIT       
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w TABS        
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w UP          
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w WIN LEFT    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w WIN RIGHT   
+.if \n(82<\n(38 .nr 82 \n(38
+.82
+.rm 82
+.nr 83 0
+.nr 38 \w ^J
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^E or ^^
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^G
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^Z or ESC or ^[
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^\e
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^J
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^H
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^U
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^O
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^P
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^R or ^]
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^M
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^L
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^B
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^T
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^K
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^H
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^L
+.if \n(83<\n(38 .nr 83 \n(38
+.83
+.rm 83
+.nr 38 \w\s+4\fBE STANDARD KEYBOARD\s0\fP-\n(80-3n-\n(81-3n-\n(82-3n-\n(83
+.if \n(38>0 .nr 38 \n(38/3
+.if \n(38<0 .nr 38 0
+.nr 80 +\n(38
+.nr 81 +\n(38
+.nr 82 +\n(38
+.nr 84 0
+.84
+.rm 84
+.nr 38 1n
+.nr 79 0
+.nr 40 \n(79+(1*\n(38)
+.nr 80 +\n(40
+.nr 41 \n(80+(3*\n(38)
+.nr 81 +\n(41
+.nr 42 \n(81+(3*\n(38)
+.nr 82 +\n(42
+.nr 43 \n(82+(3*\n(38)
+.nr 83 +\n(43
+.nr 44 \n(83+(3*\n(38)
+.nr 84 +\n(44
+.nr 84 (\n(44+\n(83)/2
+.nr TW \n(84
+.if t .if \n(TW>\n(.li .tm Table at line 32 file e.stdkey.tbl is too wide - \n(TW units
+.nr #I \n(.i
+.in +(\n(.lu-\n(TWu-\n(.iu)/2u
+.fc  
+.nr #T 0-1
+.nr #b 0-1
+.nr #a 0-1
+.eo
+.de T#
+.ds #d .d
+.if \(ts\n(.z\(ts\(ts .ds #d nl
+.mk ##
+.nr ## -1v
+.ls 1
+.if \n(#T>=0 .nr #b \n(#T
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'|0'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(41u+|\n(80u)/2u'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(42u+|\n(81u)/2u'\h'-1p'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'2p'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(43u+|\n(82u)/2u'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(44u+|\n(83u)/2u'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.ls
+..
+.ec
+.sp 2p
+.ta \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\s+4\fBE STANDARD KEYBOARD\s0\fP
+.sp 4p
+.mk #b
+.nr 36 \n(.v
+.vs \n(.vu-\n(.sp
+\h'|0'\s\n(33\l'|\n(TWu\(ul'\s0
+.vs \n(36u
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'(extend)    \h'|\n(41u' ^X                   \h'|\n(42u' DOWN        \h'|\n(43u' ^J
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'+LINE       \h'|\n(41u' ^F                   \h'|\n(42u' ERASE       \h'|\n(43u' ^X-^E or ^^
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'+PAGE       \h'|\n(41u' ^R                   \h'|\n(42u' HOME        \h'|\n(43u' ^G
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'+SRCH       \h'|\n(41u' ^Y                   \h'|\n(42u' INSERT      \h'|\n(43u' ^Z or ESC or ^[
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'+TAB        \h'|\n(41u' ^I                   \h'|\n(42u' INT         \h'|\n(43u' ^\e
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'+WORD       \h'|\n(41u' ^N                   \h'|\n(42u' JOIN        \h'|\n(43u' ^X-^J
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'-LINE       \h'|\n(41u' ^D                   \h'|\n(42u' LEFT        \h'|\n(43u' ^H
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'-PAGE       \h'|\n(41u' ^E                   \h'|\n(42u' MARK        \h'|\n(43u' ^U
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'-SRCH       \h'|\n(41u' ^T                   \h'|\n(42u' OPEN        \h'|\n(43u' ^O
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'-TAB        \h'|\n(41u' ^X-^U                \h'|\n(42u' PICK        \h'|\n(43u' ^P
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'-WORD       \h'|\n(41u' ^B                   \h'|\n(42u' REPL        \h'|\n(43u' ^X-^R or ^]
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'ALT         \h'|\n(41u' ^X-^A or ^_ or ^/    \h'|\n(42u' RETURN      \h'|\n(43u' ^M
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'BSP         \h'|\n(41u' ^C                   \h'|\n(42u' RIGHT       \h'|\n(43u' ^L
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'CHG WIN     \h'|\n(41u' ^X-^W                \h'|\n(42u' SPLIT       \h'|\n(43u' ^X-^B
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'CLOSE       \h'|\n(41u' ^V                   \h'|\n(42u' TABS        \h'|\n(43u' ^X-^T
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'CMD         \h'|\n(41u' ^A or NULL or ^@     \h'|\n(42u' UP          \h'|\n(43u' ^K
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'CTRLCHAR    \h'|\n(41u' ^X-^C                \h'|\n(42u' WIN LEFT    \h'|\n(43u' ^X-^H
+.ta \n(80u \n(81u \n(82u \n(83u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'DELCHAR     \h'|\n(41u' ^W                   \h'|\n(42u' WIN RIGHT   \h'|\n(43u' ^X-^L
+.sp 2p
+.nr 36 \n(.v
+.vs \n(.vu-\n(.sp
+\h'|0'\s\n(33\l'|\n(TWu\(ul'\s0
+.vs \n(36u
+.fc
+.nr T. 1
+.T# 1
+.in \n(#Iu
+.35
+.nr #d 0
+.TE
+.if \n-(b.=0 .nr c. \n(.c-\n(d.-28
+
+.TS
+.if \n+(b.=1 .nr d. \n(.c-\n(c.-1
+.de 35
+.ps \n(.s
+.vs \n(.vu
+.in \n(.iu
+.if \n(.u .fi
+.if \n(.j .ad
+.if \n(.j=0 .na
+..
+.nf
+.nr #~ 0
+.if n .nr #~ 0.6n
+.ds #d .d
+.if \(ts\n(.z\(ts\(ts .ds #d nl
+.fc
+.nr 33 \n(.s
+.rm 80 81 82 83 84 85 86 87 88
+.nr 80 0
+.nr 38 \w^@ 
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w^A 
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w^B 
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w^C 
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w^D 
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w^E 
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w^F 
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w^G 
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w^H 
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w^I 
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w^J 
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w^K 
+.if \n(80<\n(38 .nr 80 \n(38
+.80
+.rm 80
+.nr 81 0
+.nr 38 \w CMD     
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w CMD     
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w -WORD   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w BSP     
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w -LINE   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w -PAGE   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w +LINE   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w HOME    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w LEFT    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w +TAB    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w DOWN    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w UP      
+.if \n(81<\n(38 .nr 81 \n(38
+.81
+.rm 81
+.nr 82 0
+.nr 38 \w ^L    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ^M    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ^N    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ^O    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ^P    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ^Q    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ^R    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ^S    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ^T    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ^U    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ^V    
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w ^W    
+.if \n(82<\n(38 .nr 82 \n(38
+.82
+.rm 82
+.nr 83 0
+.nr 38 \w RIGHT      
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w RETURN     
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w +WORD      
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w OPEN       
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w PICK       
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w (not used) 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w +PAGE      
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w (not used) 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w -SRCH      
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w MARK       
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w CLOSE      
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w DELCHAR    
+.if \n(83<\n(38 .nr 83 \n(38
+.83
+.rm 83
+.nr 84 0
+.nr 38 \w  ^X    
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w  ^Y    
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w  ^Z    
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w  ^[    
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w  ^\e   
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w  ^]    
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w  ^^    
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w  ^_    
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w  ^/    
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w  ^X-^A 
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w  ^X-^C 
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w  ^X-^E 
+.if \n(84<\n(38 .nr 84 \n(38
+.84
+.rm 84
+.nr 85 0
+.nr 38 \w (extend)  
+.if \n(85<\n(38 .nr 85 \n(38
+.nr 38 \w +SRCH     
+.if \n(85<\n(38 .nr 85 \n(38
+.nr 38 \w INSMODE   
+.if \n(85<\n(38 .nr 85 \n(38
+.nr 38 \w INSERT    
+.if \n(85<\n(38 .nr 85 \n(38
+.nr 38 \w INT       
+.if \n(85<\n(38 .nr 85 \n(38
+.nr 38 \w REPL      
+.if \n(85<\n(38 .nr 85 \n(38
+.nr 38 \w ERASE     
+.if \n(85<\n(38 .nr 85 \n(38
+.nr 38 \w ALT       
+.if \n(85<\n(38 .nr 85 \n(38
+.nr 38 \w ALT       
+.if \n(85<\n(38 .nr 85 \n(38
+.nr 38 \w ALT
+.if \n(85<\n(38 .nr 85 \n(38
+.nr 38 \w CTRLCHAR
+.if \n(85<\n(38 .nr 85 \n(38
+.nr 38 \w ERASE
+.if \n(85<\n(38 .nr 85 \n(38
+.85
+.rm 85
+.nr 86 0
+.nr 38 \w ^X-^H 
+.if \n(86<\n(38 .nr 86 \n(38
+.nr 38 \w ^X-^J 
+.if \n(86<\n(38 .nr 86 \n(38
+.nr 38 \w ^X-^L 
+.if \n(86<\n(38 .nr 86 \n(38
+.nr 38 \w ^X-^N 
+.if \n(86<\n(38 .nr 86 \n(38
+.nr 38 \w ^X-^R 
+.if \n(86<\n(38 .nr 86 \n(38
+.nr 38 \w ^X-^B 
+.if \n(86<\n(38 .nr 86 \n(38
+.nr 38 \w ^X-^T 
+.if \n(86<\n(38 .nr 86 \n(38
+.nr 38 \w ^X-^U 
+.if \n(86<\n(38 .nr 86 \n(38
+.nr 38 \w ^X-^W 
+.if \n(86<\n(38 .nr 86 \n(38
+.86
+.rm 86
+.nr 87 0
+.nr 38 \w WIN LEFT
+.if \n(87<\n(38 .nr 87 \n(38
+.nr 38 \w JOIN
+.if \n(87<\n(38 .nr 87 \n(38
+.nr 38 \w WIN RIGHT
+.if \n(87<\n(38 .nr 87 \n(38
+.nr 38 \w DEL WORD
+.if \n(87<\n(38 .nr 87 \n(38
+.nr 38 \w REPL
+.if \n(87<\n(38 .nr 87 \n(38
+.nr 38 \w SPLIT
+.if \n(87<\n(38 .nr 87 \n(38
+.nr 38 \w TABS
+.if \n(87<\n(38 .nr 87 \n(38
+.nr 38 \w -TAB
+.if \n(87<\n(38 .nr 87 \n(38
+.nr 38 \w CHG WIN
+.if \n(87<\n(38 .nr 87 \n(38
+.87
+.rm 87
+.nr 88 0
+.88
+.rm 88
+.nr 38 1n
+.nr 79 0
+.nr 40 \n(79+(1*\n(38)
+.nr 80 +\n(40
+.nr 41 \n(80+(3*\n(38)
+.nr 81 +\n(41
+.nr 42 \n(81+(3*\n(38)
+.nr 82 +\n(42
+.nr 43 \n(82+(3*\n(38)
+.nr 83 +\n(43
+.nr 44 \n(83+(3*\n(38)
+.nr 84 +\n(44
+.nr 45 \n(84+(3*\n(38)
+.nr 85 +\n(45
+.nr 46 \n(85+(3*\n(38)
+.nr 86 +\n(46
+.nr 47 \n(86+(3*\n(38)
+.nr 87 +\n(47
+.nr 48 \n(87+(3*\n(38)
+.nr 88 +\n(48
+.nr 88 (\n(48+\n(87)/2
+.nr TW \n(88
+.if t .if \n(TW>\n(.li .tm Table at line 53 file e.stdkey.tbl is too wide - \n(TW units
+.nr #I \n(.i
+.in +(\n(.lu-\n(TWu-\n(.iu)/2u
+.fc  
+.nr #T 0-1
+.nr #b 0-1
+.nr #a 0-1
+.eo
+.de T#
+.ds #d .d
+.if \(ts\n(.z\(ts\(ts .ds #d nl
+.mk ##
+.nr ## -1v
+.ls 1
+.if \n(#T>=0 .nr #b \n(#T
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'|0'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(41u+|\n(80u)/2u'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(42u+|\n(81u)/2u'\h'-1p'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'2p'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(43u+|\n(82u)/2u'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(44u+|\n(83u)/2u'\h'-1p'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'2p'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(45u+|\n(84u)/2u'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(46u+|\n(85u)/2u'\h'-1p'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'2p'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(47u+|\n(86u)/2u'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.if \n(#b>=0 .sp -1
+.if \n(#b>=0 \h'(|\n(48u+|\n(87u)/2u'\s\n(33\h'-\n(#~u'\L'|\n(#bu-\n(35u'\s0\v'\n(\*(#du-\n(#bu+\n(35u'\h'|\n(TWu'
+.ls
+..
+.ec
+.mk #b
+.nr 36 \n(.v
+.vs \n(.vu-\n(.sp
+\h'|0'\s\n(33\l'|\n(TWu\(ul'\s0
+.vs \n(36u
+.sp 2p
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^@ \h'|\n(41u' CMD     \h'|\n(42u' ^L    \h'|\n(43u' RIGHT      \h'|\n(44u'  ^X    \h'|\n(45u' (extend)  \h'|\n(46u' ^X-^H \h'|\n(47u' WIN LEFT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^A \h'|\n(41u' CMD     \h'|\n(42u' ^M    \h'|\n(43u' RETURN     \h'|\n(44u'  ^Y    \h'|\n(45u' +SRCH     \h'|\n(46u' ^X-^J \h'|\n(47u' JOIN
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^B \h'|\n(41u' -WORD   \h'|\n(42u' ^N    \h'|\n(43u' +WORD      \h'|\n(44u'  ^Z    \h'|\n(45u' INSMODE   \h'|\n(46u' ^X-^L \h'|\n(47u' WIN RIGHT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^C \h'|\n(41u' BSP     \h'|\n(42u' ^O    \h'|\n(43u' OPEN       \h'|\n(44u'  ^[    \h'|\n(45u' INSERT    \h'|\n(46u' ^X-^N \h'|\n(47u' DEL WORD
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^D \h'|\n(41u' -LINE   \h'|\n(42u' ^P    \h'|\n(43u' PICK       \h'|\n(44u'  ^\e   \h'|\n(45u' INT       \h'|\n(46u' ^X-^R \h'|\n(47u' REPL
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^E \h'|\n(41u' -PAGE   \h'|\n(42u' ^Q    \h'|\n(43u' (not used) \h'|\n(44u'  ^]    \h'|\n(45u' REPL      \h'|\n(46u' ^X-^B \h'|\n(47u' SPLIT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^F \h'|\n(41u' +LINE   \h'|\n(42u' ^R    \h'|\n(43u' +PAGE      \h'|\n(44u'  ^^    \h'|\n(45u' ERASE     \h'|\n(46u' ^X-^T \h'|\n(47u' TABS
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^G \h'|\n(41u' HOME    \h'|\n(42u' ^S    \h'|\n(43u' (not used) \h'|\n(44u'  ^_    \h'|\n(45u' ALT       \h'|\n(46u' ^X-^U \h'|\n(47u' -TAB
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^H \h'|\n(41u' LEFT    \h'|\n(42u' ^T    \h'|\n(43u' -SRCH      \h'|\n(44u'  ^/    \h'|\n(45u' ALT       \h'|\n(46u' ^X-^W \h'|\n(47u' CHG WIN
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^I \h'|\n(41u' +TAB    \h'|\n(42u' ^U    \h'|\n(43u' MARK       \h'|\n(44u'  ^X-^A \h'|\n(45u' ALT\h'|\n(46u'\h'|\n(47u'
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^J \h'|\n(41u' DOWN    \h'|\n(42u' ^V    \h'|\n(43u' CLOSE      \h'|\n(44u'  ^X-^C \h'|\n(45u' CTRLCHAR\h'|\n(46u'\h'|\n(47u'
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u \n(85u \n(86u \n(87u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'^K \h'|\n(41u' UP      \h'|\n(42u' ^W    \h'|\n(43u' DELCHAR    \h'|\n(44u'  ^X-^E \h'|\n(45u' ERASE\h'|\n(46u'\h'|\n(47u'
+.sp 2p
+.nr 36 \n(.v
+.vs \n(.vu-\n(.sp
+\h'|0'\s\n(33\l'|\n(TWu\(ul'\s0
+.vs \n(36u
+.fc
+.nr T. 1
+.T# 1
+.in \n(#Iu
+.35
+.nr #a 0
+.TE
+.if \n-(b.=0 .nr c. \n(.c-\n(d.-19
+.\}
+.if n \{\
+.TS
+.if \n+(b.=1 .nr d. \n(.c-\n(c.-1
+.de 35
+.ps \n(.s
+.vs \n(.vu
+.in \n(.iu
+.if \n(.u .fi
+.if \n(.j .ad
+.if \n(.j=0 .na
+..
+.nf
+.nr #~ 0
+.if n .nr #~ 0.6n
+.ds #d .d
+.if \(ts\n(.z\(ts\(ts .ds #d nl
+.fc
+.nr 33 \n(.s
+.rm 80 81 82 83 84
+.nr 80 0
+.nr 38 \w(extend)    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w+LINE       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w+PAGE       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w+SRCH       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w+TAB        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w+WORD       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w-LINE       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w-PAGE       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w-SRCH       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w-TAB        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w-WORD       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wALT         
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wBSP         
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wCHG WIN     
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wCLOSE       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wCMD         
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wCTRLCHAR    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wDELCHAR     
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wDOWN        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wERASE       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wHOME        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wINSERT      
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wINT         
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wJOIN        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wLEFT        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wMARK        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wOPEN        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wPICK        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wREPL        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wRETURN      
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wRIGHT       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wSPLIT       
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wTABS        
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wUP          
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wWIN LEFT    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \wWIN RIGHT   
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w	    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w	    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w	    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w	    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w	    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w	    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w	    
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w	    
+.if \n(80<\n(38 .nr 80 \n(38
+.80
+.rm 80
+.nr 81 0
+.nr 38 \w ^X                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^F                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^R                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^Y                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^I                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^N                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^D                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^E                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^T                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^U                 
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^B                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^A or ^_ or ^/     
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^C                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^W                 
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^V                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^A or NULL or ^@      
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^C                 
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^W                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^J                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^E or ^^           
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^G                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^Z or ESC or ^[       
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^\e                   
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^J                 
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^H                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^U                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^O                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^P                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^R or ^]           
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^M                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^L                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^B                 
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^T                 
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^K                    
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^H                 
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w ^X-^L                 
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w                       
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w                       
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w                       
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w                       
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w                       
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w                       
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w                       
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \w                       
+.if \n(81<\n(38 .nr 81 \n(38
+.81
+.rm 81
+.nr 82 0
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.nr 38 \w|
+.if \n(82<\n(38 .nr 82 \n(38
+.82
+.rm 82
+.nr 83 0
+.nr 38 \w ^@    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^A    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^B    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^C    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^D    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^E    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^F    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^G    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^H    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^I    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^J    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^K    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^L    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^M    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^N    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^O    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^P    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^Q    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^R    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^S    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^T    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^U    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^V    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^W    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^Y    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^Z    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^[    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^\e   
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^]    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^^    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^_    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^/    
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^A 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^C 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^E 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^H 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^J 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^L 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^R 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^B 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^T 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^U 
+.if \n(83<\n(38 .nr 83 \n(38
+.nr 38 \w ^X-^W 
+.if \n(83<\n(38 .nr 83 \n(38
+.83
+.rm 83
+.nr 84 0
+.nr 38 \w CMD
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w CMD
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w -WORD
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w BSP
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w -LINE
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w -PAGE
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w +LINE
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w HOME
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w LEFT
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w +TAB
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w DOWN
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w UP
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w RIGHT
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w RETURN
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w +WORD
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w OPEN
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w PICK
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w (not used)
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w +PAGE
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w (not used)
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w -SRCH
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w MARK
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w CLOSE
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w DELCHAR
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w (extend)
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w +SRCH
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w INSMODE
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w INSERT
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w INT
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w REPL
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w ERASE
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w ALT
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w ALT
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w ALT
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w CTRLCHAR
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w ERASE
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w WIN LEFT
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w JOIN
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w WIN RIGHT
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w REPL
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w SPLIT
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w TABS
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w -TAB
+.if \n(84<\n(38 .nr 84 \n(38
+.nr 38 \w CHG WIN
+.if \n(84<\n(38 .nr 84 \n(38
+.84
+.rm 84
+.nr 38 \wE STANDARD KEYBOARD-\n(80-3n-\n(81-3n-\n(82-3n-\n(83-3n-\n(84
+.if \n(38>0 .nr 38 \n(38/4
+.if \n(38<0 .nr 38 0
+.nr 80 +\n(38
+.nr 81 +\n(38
+.nr 82 +\n(38
+.nr 83 +\n(38
+.nr 38 1n
+.nr 79 0
+.nr 40 \n(79+(0*\n(38)
+.nr 80 +\n(40
+.nr 41 \n(80+(3*\n(38)
+.nr 81 +\n(41
+.nr 42 \n(81+(3*\n(38)
+.nr 82 +\n(42
+.nr 43 \n(82+(3*\n(38)
+.nr 83 +\n(43
+.nr 44 \n(83+(3*\n(38)
+.nr 84 +\n(44
+.nr TW \n(84
+.if t .if \n(TW>\n(.li .tm Table at line 106 file e.stdkey.tbl is too wide - \n(TW units
+.fc  
+.nr #T 0-1
+.nr #a 0-1
+.eo
+.de T#
+.ds #d .d
+.if \(ts\n(.z\(ts\(ts .ds #d nl
+.mk ##
+.nr ## -1v
+.ls 1
+.ls
+..
+.ec
+.ta \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'E STANDARD KEYBOARD
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\h'|\n(41u'\h'|\n(42u'\h'|\n(43u'\h'|\n(44u'
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'(extend)    \h'|\n(41u' ^X                    \h'|\n(42u'|\h'|\n(43u' ^@    \h'|\n(44u' CMD
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'+LINE       \h'|\n(41u' ^F                    \h'|\n(42u'|\h'|\n(43u' ^A    \h'|\n(44u' CMD
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'+PAGE       \h'|\n(41u' ^R                    \h'|\n(42u'|\h'|\n(43u' ^B    \h'|\n(44u' -WORD
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'+SRCH       \h'|\n(41u' ^Y                    \h'|\n(42u'|\h'|\n(43u' ^C    \h'|\n(44u' BSP
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'+TAB        \h'|\n(41u' ^I                    \h'|\n(42u'|\h'|\n(43u' ^D    \h'|\n(44u' -LINE
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'+WORD       \h'|\n(41u' ^N                    \h'|\n(42u'|\h'|\n(43u' ^E    \h'|\n(44u' -PAGE
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'-LINE       \h'|\n(41u' ^D                    \h'|\n(42u'|\h'|\n(43u' ^F    \h'|\n(44u' +LINE
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'-PAGE       \h'|\n(41u' ^E                    \h'|\n(42u'|\h'|\n(43u' ^G    \h'|\n(44u' HOME
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'-SRCH       \h'|\n(41u' ^T                    \h'|\n(42u'|\h'|\n(43u' ^H    \h'|\n(44u' LEFT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'-TAB        \h'|\n(41u' ^X-^U                 \h'|\n(42u'|\h'|\n(43u' ^I    \h'|\n(44u' +TAB
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'-WORD       \h'|\n(41u' ^B                    \h'|\n(42u'|\h'|\n(43u' ^J    \h'|\n(44u' DOWN
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'ALT         \h'|\n(41u' ^X-^A or ^_ or ^/     \h'|\n(42u'|\h'|\n(43u' ^K    \h'|\n(44u' UP
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'BSP         \h'|\n(41u' ^C                    \h'|\n(42u'|\h'|\n(43u' ^L    \h'|\n(44u' RIGHT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'CHG WIN     \h'|\n(41u' ^X-^W                 \h'|\n(42u'|\h'|\n(43u' ^M    \h'|\n(44u' RETURN
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'CLOSE       \h'|\n(41u' ^V                    \h'|\n(42u'|\h'|\n(43u' ^N    \h'|\n(44u' +WORD
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'CMD         \h'|\n(41u' ^A or NULL or ^@      \h'|\n(42u'|\h'|\n(43u' ^O    \h'|\n(44u' OPEN
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'CTRLCHAR    \h'|\n(41u' ^X-^C                 \h'|\n(42u'|\h'|\n(43u' ^P    \h'|\n(44u' PICK
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'DELCHAR     \h'|\n(41u' ^W                    \h'|\n(42u'|\h'|\n(43u' ^Q    \h'|\n(44u' (not used)
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'DOWN        \h'|\n(41u' ^J                    \h'|\n(42u'|\h'|\n(43u' ^R    \h'|\n(44u' +PAGE
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'ERASE       \h'|\n(41u' ^X-^E or ^^           \h'|\n(42u'|\h'|\n(43u' ^S    \h'|\n(44u' (not used)
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'HOME        \h'|\n(41u' ^G                    \h'|\n(42u'|\h'|\n(43u' ^T    \h'|\n(44u' -SRCH
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'INSERT      \h'|\n(41u' ^Z or ESC or ^[       \h'|\n(42u'|\h'|\n(43u' ^U    \h'|\n(44u' MARK
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'INT         \h'|\n(41u' ^\e                   \h'|\n(42u'|\h'|\n(43u' ^V    \h'|\n(44u' CLOSE
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'JOIN        \h'|\n(41u' ^X-^J                 \h'|\n(42u'|\h'|\n(43u' ^W    \h'|\n(44u' DELCHAR
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'LEFT        \h'|\n(41u' ^H                    \h'|\n(42u'|\h'|\n(43u' ^X    \h'|\n(44u' (extend)
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'MARK        \h'|\n(41u' ^U                    \h'|\n(42u'|\h'|\n(43u' ^Y    \h'|\n(44u' +SRCH
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'OPEN        \h'|\n(41u' ^O                    \h'|\n(42u'|\h'|\n(43u' ^Z    \h'|\n(44u' INSMODE
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'PICK        \h'|\n(41u' ^P                    \h'|\n(42u'|\h'|\n(43u' ^[    \h'|\n(44u' INSERT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'REPL        \h'|\n(41u' ^X-^R or ^]           \h'|\n(42u'|\h'|\n(43u' ^\e   \h'|\n(44u' INT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'RETURN      \h'|\n(41u' ^M                    \h'|\n(42u'|\h'|\n(43u' ^]    \h'|\n(44u' REPL
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'RIGHT       \h'|\n(41u' ^L                    \h'|\n(42u'|\h'|\n(43u' ^^    \h'|\n(44u' ERASE
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'SPLIT       \h'|\n(41u' ^X-^B                 \h'|\n(42u'|\h'|\n(43u' ^_    \h'|\n(44u' ALT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'TABS        \h'|\n(41u' ^X-^T                 \h'|\n(42u'|\h'|\n(43u' ^/    \h'|\n(44u' ALT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'UP          \h'|\n(41u' ^K                    \h'|\n(42u'|\h'|\n(43u' ^X-^A \h'|\n(44u' ALT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'WIN LEFT    \h'|\n(41u' ^X-^H                 \h'|\n(42u'|\h'|\n(43u' ^X-^C \h'|\n(44u' CTRLCHAR
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'WIN RIGHT   \h'|\n(41u' ^X-^L                 \h'|\n(42u'|\h'|\n(43u' ^X-^E \h'|\n(44u' ERASE
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'	    \h'|\n(41u'                       \h'|\n(42u'|\h'|\n(43u' ^X-^H \h'|\n(44u' WIN LEFT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'	    \h'|\n(41u'                       \h'|\n(42u'|\h'|\n(43u' ^X-^J \h'|\n(44u' JOIN
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'	    \h'|\n(41u'                       \h'|\n(42u'|\h'|\n(43u' ^X-^L \h'|\n(44u' WIN RIGHT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'	    \h'|\n(41u'                       \h'|\n(42u'|\h'|\n(43u' ^X-^R \h'|\n(44u' REPL
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'	    \h'|\n(41u'                       \h'|\n(42u'|\h'|\n(43u' ^X-^B \h'|\n(44u' SPLIT
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'	    \h'|\n(41u'                       \h'|\n(42u'|\h'|\n(43u' ^X-^T \h'|\n(44u' TABS
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'	    \h'|\n(41u'                       \h'|\n(42u'|\h'|\n(43u' ^X-^U \h'|\n(44u' -TAB
+.ta \n(80u \n(81u \n(82u \n(83u \n(84u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'	    \h'|\n(41u'                       \h'|\n(42u'|\h'|\n(43u' ^X-^W \h'|\n(44u' CHG WIN
+.fc
+.nr T. 1
+.T# 1
+.35
+.TE
+.if \n-(b.=0 .nr c. \n(.c-\n(d.-50
+.\}
+.ps 10
+.vs 12

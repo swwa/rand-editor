@@ -1,0 +1,290 @@
+#
+#	Copyright abandoned, 1983, The Rand Corporation
+#
+
+# Rand Editor with LA package
+# The following groups go together
+#   CFLAGS=-g and LIBC=-lg for debugging on the VAX
+#   DEFS=-DTERMCAP and TERMCAP=-ltermcap
+#   DEFS=-DPROFILE and PROFILE=-p
+#
+
+DFS     = -DUNIXV7 -DTERMCAP -DNOSOBUF
+CCF     = 
+LDF     = 
+LD      = /local/bin/gld -lc
+CC	= cc
+
+LOCALINCL = ../include
+LA      = ../la1/
+LALIB   = ../la1/libla.a
+FF      = ../ff3/
+FFLIB   = ../ff3/libff.a
+MISC    = ../lib
+MISCLIB = ../lib/libtmp.a
+DEFS    = $(DFS)
+# NEWVERSION creates e.r.c
+NEWVERSION = newversion.V
+INCL    = -I. -I$(LA) -I$(FF) -I$(LOCALINCL)
+SIG_INCL =signal.h
+SGTT_INCL =sgtty.h
+CFLAGS  = $(CCF) $(DEFS) $(INCL) $(PROFILE)
+LDFLAGS = $(LDF)
+RM      = rm -f
+LIBS    = $(LALIB) $(FFLIB) 
+
+HFILES  = \
+	e.cm.h \
+	e.e.h \
+	e.fn.h \
+	e.func.h \
+	e.h \
+	e.inf.h \
+	e.m.h \
+	e.ru.h \
+	e.se.h \
+	e.sg.h \
+	e.t.h \
+	e.tt.h \
+	e.wi.h
+
+OFILES  = \
+	e.o \
+	e.cm.o \
+	e.d.o \
+	e.e.o \
+	e.f.o \
+	e.h.o \
+	e.iit.o \
+	e.it.o \
+	e.la.o \
+	e.m.o \
+	e.main.o \
+	e.mk.o \
+	e.nm.o \
+	e.p.o \
+	e.pa.o \
+	e.profile.o \
+	e.put.o \
+	e.q.o \
+	e.ra.o \
+	e.re.o \
+	e.ru.o \
+	e.sb.o \
+	e.se.o \
+	e.sv.o \
+	e.t.o \
+	e.tb.o \
+	e.tt.o \
+	e.u.o \
+	e.wi.o \
+	e.wk.o \
+	e.x.o \
+	getshort.o \
+	getlong.o  \
+	putshort.o \
+	putlong.o
+
+CFILES  = \
+	e.c \
+	e.cm.c \
+	e.d.c \
+	e.e.c \
+	e.f.c \
+	e.h.c \
+	e.iit.c \
+	e.it.c \
+	e.la.c \
+	e.m.c \
+	e.main.c \
+	e.mk.c \
+	e.nm.c \
+	e.p.c \
+	e.pa.c \
+	e.profile.c \
+	e.put.c \
+	e.q.c \
+	e.r.c \
+	e.ra.c \
+	e.re.c \
+	e.ru.c \
+	e.sb.c \
+	e.se.c \
+	e.sv.c \
+	e.t.c \
+	e.tb.c \
+	e.tt.c \
+	e.u.c \
+	e.wi.c \
+	e.wk.c \
+	e.x.c \
+	getshort.c \
+	getlong.c  \
+	putshort.c \
+	putlong.c
+
+le:     $(OFILES)
+	/bin/sh $(NEWVERSION)
+	$(CC) $(CFLAGS) -c e.r.c
+	$(LD) -o le $(LDFLAGS)  $(OFILES) e.r.o $(LIBS)
+
+ofiles: $(OFILES)
+
+.c.o:
+	/usr/lib/cpp -P $(CFLAGS) $< > tmp.c
+	$(CC) $(CFLAGS) -c tmp.c -o $*.o
+	rm tmp.c
+
+newrev:
+	/bin/sh $(NEWVERSION)
+	$(CC) $(CFLAGS) -c e.r.c
+
+$(LALIB):
+
+$(FFLIB):
+
+$(MISCLIB):
+
+# Be sure the defs in "Ifdefs" agree with $(DEFS)
+depend:
+	/bin/sh Makedep $(HFILES) $(CFILES)
+
+# Be sure the defs in "Ifdefs" agree with $(DEFS)
+Comments: $(CFILES)
+	Makedoc $(CFILES)
+
+# Be sure the defs in "Ifdefs" agree with $(DEFS)
+Calls:  $(CFILES)
+	Makecalls $(CFILES)
+
+lint:
+	lint $(DEFS) $(INCL) $(CFILES) \
+        $(FF)llib-lff.ln \
+        $(LA)llib-lla.ln \
+	-lc
+
+pres: pres.o $(MISCLIB)
+	$(CC)        \
+	pres.o \
+	$(MISCLIB)
+	-mv pres pres.old
+	mv a.out pres
+
+clobber:      clean
+	$(RM) le le.old pres pres.old ,* .??*
+clean:
+	$(RM) $(OFILES) pres.o
+
+# DO NOT DELETE THIS LINE
+
+e.h: $(LA)/la.h
+e.h: $(FF)/ff.h
+e.h: e.t.h
+e.o: e.h
+e.o: e.e.h
+e.o: e.it.h
+e.o: e.tt.h
+e.o: e.wi.h
+e.o: e.fn.h
+e.o: e.sg.h
+e.o: e.inf.h
+e.cm.o: e.h
+e.cm.o: e.e.h
+e.cm.o: e.m.h
+e.cm.o: e.ru.h
+e.cm.o: e.cm.h
+e.cm.o: e.wi.h
+e.d.o: e.h
+e.d.o: e.tt.h
+e.d.o: e.it.h
+e.e.o: e.h
+e.e.o: e.m.h
+e.e.o: e.cm.h
+e.e.o: e.e.h
+e.f.o: e.h
+e.iit.o: e.h
+e.iit.o: e.it.h
+e.it.o: e.h
+e.it.o: e.it.h
+e.la.o: e.h
+e.la.o: e.m.h
+e.m.o: e.h
+e.m.o: e.cm.h
+e.m.o: e.inf.h
+e.m.o: e.m.h
+e.m.o: e.tt.h
+e.m.o: e.e.h
+e.main.o: e.h
+e.mk.o: e.h
+e.mk.o: e.inf.h
+e.mk.o: e.m.h
+e.nm.o: e.h
+e.nm.o: e.inf.h
+e.nm.o: e.m.h
+e.nm.o: e.cm.h
+e.p.o: e.h
+e.p.o: e.cm.h
+e.pa.o: e.h
+e.pa.o: e.m.h
+e.pa.o: e.cm.h
+e.put.o: e.h
+e.put.o: e.m.h
+e.put.o: e.cm.h
+e.put.o: e.e.h
+e.q.o: e.h
+e.q.o: e.m.h
+e.q.o: e.cm.h
+e.q.o: e.fn.h
+e.q.o: e.tt.h
+e.ra.o: e.h
+e.ra.o: e.m.h
+e.ra.o: e.cm.h
+e.re.o: e.h
+e.re.o: e.m.h
+e.re.o: e.cm.h
+e.re.o: e.se.h
+e.ru.o: e.h
+e.ru.o: e.e.h
+e.ru.o: e.m.h
+e.ru.o: e.cm.h
+e.ru.o: e.ru.h
+e.sb.o: e.h
+e.sb.o: e.fn.h
+e.sb.o: e.sg.h
+e.se.o: e.h
+e.se.o: e.m.h
+e.se.o: e.cm.h
+e.sv.o: e.h
+e.sv.o: e.m.h
+e.sv.o: e.cm.h
+e.t.o: e.h
+e.t.o: e.inf.h
+e.t.o: e.m.h
+e.t.o: e.tt.h
+e.tb.o: e.h
+e.tb.o: e.m.h
+e.tb.o: e.cm.h
+e.tt.o: e.h
+e.tt.o: e.tt.h
+e.tt.o: term/standard.c
+e.tt.o: term/tcap.c
+e.tt.o: term/vt100.c
+e.u.o: e.h
+e.u.o: e.m.h
+e.u.o: e.cm.h
+e.wi.o: e.h
+e.wi.o: e.cm.h
+e.wi.o: e.inf.h
+e.wi.o: e.tt.h
+e.wi.o: e.wi.h
+e.wk.o: e.h
+e.wk.o: e.inf.h
+e.x.o: e.h
+e.x.o: e.e.h
+e.x.o: e.inf.h
+e.x.o: e.m.h
+e.x.o: e.sg.h
+
+# DEPENDENCIES MUST END AT END OF FILE
+# IF YOU PUT STUFF HERE IT WILL GO AWAY
+# see make depend above
