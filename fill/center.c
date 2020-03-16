@@ -381,7 +381,7 @@ doit()
     if (c == EOF)
 	goto done;
     for (n=0; n<nlines; n++) {
-	if ((c=getline()) != EOF)
+	if ((c=legetline()) != EOF)
 	    centline();
 	else
 	    break;
@@ -405,7 +405,7 @@ done:
 }
 
 
-getline()
+legetline()
 {
     register int i, c;
     register char *cp;

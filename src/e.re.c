@@ -28,6 +28,7 @@ extern Flag starthere;
 extern Flag first_repl_line;
 extern int DebugVal;
 Small BegOrEnd ();
+static int re_advance ();
 
 static Flag re_zerolen1;        /* we KNOW the length is zero when set */
 
@@ -107,11 +108,11 @@ Flag srch;      /* if NO, then only look at current position */
 	if (delta > 0)
 	    goto pret;
 	ln = la_lsize (curlas) - 1;
-	getline (ln);
+	legetline (ln);
 	at = &cline[ncline];        /* past end (delta is < 0) */
     }
     else {
-	getline (ln);
+	legetline (ln);
 	/*
 	 *  If pattern is "^$" and already at a blank line, start at
 	 *  next/previous line.  If that line is blank, found it.
@@ -120,12 +121,12 @@ Flag srch;      /* if NO, then only look at current position */
 	    if (delta > 0) {
 		if (++ln >= la_lsize (curlas))
 		    goto pret;
-		getline (ln);
+		legetline (ln);
 	    }
 	    else {
 		if (--ln < 1)
 		    goto pret;
-		getline (ln);
+		legetline (ln);
 	    }
 	    if (ncline == 1) {      /* blank line */
 		retval = FOUND_SRCH;
@@ -167,7 +168,7 @@ Flag srch;      /* if NO, then only look at current position */
 		retval = NOTFOUND_SRCH;
 		goto pret;
 	    }
-	    getline (ln);
+	    legetline (ln);
 	    cline[ncline - 1] = '\0';
 	    at = cline;
 	}
@@ -205,7 +206,7 @@ Flag srch;      /* if NO, then only look at current position */
 	       )
 	   )
 	    break;
-	getline (ln);
+	legetline (ln);
 	at = cline;
 	cline[ncline - 1] = '\0';
     }
@@ -252,7 +253,7 @@ Flag    curpos_only;
 	if (delta > 0) {        /* forward search */
 	    if (ln >= la_lsize (curlas))
 		return NOTFOUND_SRCH;
-	    getline (ln);
+	    legetline (ln);
 	    if (ch == '$') {
 		if (curpos_only) {              /* repl interactive */
 		    if (stcol == ncline - 1)
@@ -266,7 +267,7 @@ Flag    curpos_only;
 			return NOTFOUND_SRCH;
 		    if (++ln > limit)
 			return NOTFOUND_SRCH;
-		    getline (ln);
+		    legetline (ln);
 		}
 		srchline = ln;
 		srchcol = ncline - 1;
@@ -286,7 +287,7 @@ Flag    curpos_only;
 		    if (++ln > limit)
 			return NOTFOUND_SRCH;
 		first_repl_line = NO;
-		getline (ln);
+		legetline (ln);
 		srchline = ln;
 		srchcol = 0;
 	    }
@@ -307,7 +308,7 @@ Flag    curpos_only;
 			stcol = ncline;
 		}
 	    }
-	    getline (ln);
+	    legetline (ln);
 
 	    if (ch == '$') {
 		if (curpos_only) {              /* repl interactive */
@@ -320,7 +321,7 @@ Flag    curpos_only;
 		if (stcol < ncline) {
 		    if (ln == 0 || --ln < limit)
 			return NOTFOUND_SRCH;
-		    getline (ln);                   /* previous line */
+		    legetline (ln);                   /* previous line */
 		}
 		srchline = ln;
 		srchcol = ncline - 1;
@@ -336,7 +337,7 @@ Flag    curpos_only;
 		if (stcol == 0 && !first_repl_line) {
 		    if (ln == 0 || --ln < limit)
 			return NOTFOUND_SRCH;
-		    getline (ln);                   /* previous line */
+		    legetline (ln);                   /* previous line */
 		}
 		first_repl_line = NO;
 		srchline = ln;

@@ -12,7 +12,8 @@ file e.t.c
 */
 #endif
 
-#include <varargs.h>
+#include <stdarg.h>
+#include <errno.h>
 #include "e.h"
 #include "e.inf.h"
 #include "e.m.h"
@@ -88,12 +89,14 @@ extern void exchgcmds ();
 extern void getarg ();
 extern void limitcursor ();
 extern void info ();
-extern void mesg ();
+void mesg (int parm, ...);
 extern void credisplay ();
 extern void redisplay ();
 extern void screenexit ();
 extern void tglinsmode ();
 extern Flag vinsdel ();
+static unsigned Short getkey1 ();
+
 
 #ifdef COMMENT
 /*
@@ -198,7 +201,7 @@ Scols   ncols;      /* number of columns for partial line redraw */
 		needputup = YES;
 		break;
 	    }
-	    getline (curwksp->wlin + ln);
+	    legetline (curwksp->wlin + ln);
 	    if (xcline) {
 		offendflg = YES;
 		lmc = ELMCH;
@@ -759,7 +762,7 @@ Flag wt;
 	return;
     if (curfile != NULLFILE) {
 	Reg1 Ncols charpos;
-	getline (cursorline + curwksp->wlin);
+	legetline (cursorline + curwksp->wlin);
 	bulsave = (charpos = cursorcol + curwksp->wcol) < ncline - 1
 		  ? (cline[charpos] & CHARMASK)
 		  : ' ';
@@ -1273,7 +1276,6 @@ Reg2 Flag peekflg;
 {
     Reg1 unsigned Short rkey;
     static Flag knockdown  = NO;
-    extern unsigned Short getkey1 ();
 
     if (peekflg == WAIT_KEY && keyused == NO)
 	return key; /* then getkey is really a no-op */
@@ -2324,7 +2326,7 @@ int *len;
 
     olas = curlas;
     curlas = &wksp->las;
-    getline (line);
+    legetline (line);
     curlas = olas;
     if (col >= ncline - 1 || cline[col] == ' ')
 	return NULL;
@@ -2425,15 +2427,12 @@ mesg (parm, msgs)
 */
 #endif
 /* VARARGS 1 */
-void
-mesg (va_alist, a1, a2, a3)
-	va_dcl
+void mesg (int parm, ...)
 {
+    va_list msgs;
     Reg3 Scols lastcol;
     Reg6 Small nmsg;
     Reg4 Flag to_image;         /* YES = to screen image, NO = putchar */
-    va_list msgs;
-    int parm;
 
     /*
      *  Added so opt -silent can be used to execute the .e_profile
@@ -2442,9 +2441,8 @@ mesg (va_alist, a1, a2, a3)
     if (silent)
        return;
 
-    va_start(msgs);
-    parm = va_arg (msgs, int);
-
+    va_start(msgs, parm);
+ 
     to_image = windowsup || replaying;
     if (to_image) {
 	if (parm & TELSTRT) {

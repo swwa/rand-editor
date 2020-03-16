@@ -19,7 +19,7 @@ file e.la.c
 
 #include SIG_INCL
 
-extern void getline ();
+extern void legetline ();
 extern void chkcline ();
 extern void excline ();
 extern void elasdump ();
@@ -27,24 +27,24 @@ extern void elasdump ();
 #ifdef COMMENT
 /*
 void
-getline (ln)
+legetline (ln)
     Nlines  ln;
 .
     Gets line ln of the current workspace into cline.
     If (ln < 0) then flush cline if modified
-      and set clinelas to 0 so that the next call to getline is
+      and set clinelas to 0 so that the next call to legetline is
       guaranteed to get a fresh copy of the line desired from the file.
 */
 #endif
 void
-getline (ln)
+legetline (ln)
 Nlines  ln;
 {
     Reg5 char *clp;     /* cline pointer */
     Reg6 char *endcl;
     La_stream *rlas;
 
-/*  dbgpr ("getline: *** old %d, new %d, clinelas %x, curfile %d\n",
+/*  dbgpr ("legetline: *** old %d, new %d, clinelas %x, curfile %d\n",
 	   clineno, ln, clinelas, curfile); /**/
 
     if (ln < 0) {
@@ -101,7 +101,7 @@ Nlines  ln;
 	Uchar *bufp;
      /* elasdump (rlas, "before getlin");       /**/
 	if ((nleft = la_lpnt (rlas, &bufp)) <= 0)
-	    fatal (FATALIO, "getline read err #%d %d",
+	    fatal (FATALIO, "legetline read err #%d %d",
 		   la_error (), nleft);
 	cp = bufp;
 	while (--nleft >= 0) Block {
@@ -187,7 +187,7 @@ Flag allflg;
     chkcline ();
     nr = dechars (cline);
     fcline = NO;
-    clinelas = (La_stream *) 0; /* force a getline next time */
+    clinelas = (La_stream *) 0; /* force a legetline next time */
     Block {
 	La_linepos ln;
 	La_linepos nins;

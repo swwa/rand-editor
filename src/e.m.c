@@ -449,7 +449,7 @@ gotcmd:
 		    case 0:
 			if (key == CCRWINDOW) {
 				Ncols n;
-			    getline (cursorline + curwksp->wlin);
+			    legetline (cursorline + curwksp->wlin);
 			    /*
 			     *  shift window so the end of line is displayed
 			     *  (w/little xtra space); don't do anything if
@@ -546,7 +546,7 @@ gotcmd:
 		    /* donetype can only be 0 */
 		    Block {
 			Reg2 Ncols k;
-			getline (curwksp->wlin + cursorline);
+			legetline (curwksp->wlin + cursorline);
 			if ((k = ncline - 1 - curwksp->wcol - cursorcol) > 0) {
 			    donetype = ed (OPERASE, QERASE,
 					   curwksp->wlin + cursorline,
@@ -608,7 +608,7 @@ gotcmd:
 			    break;
 
 			case CCMOVERIGHT:
-			    getline (curwksp->wlin + cursorline);
+			    legetline (curwksp->wlin + cursorline);
 			    if ((lns = ncline - 1 - (curwksp->wcol + cursorcol))
 				  > 0)
 				lns = min (lns, curwin->rtext - cursorcol);

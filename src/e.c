@@ -199,6 +199,26 @@ extern void chk_profile();
 
 #ifdef COMMENT
 /*
+static void
+keyedit (file)
+    char   *file;
+.
+    Write out an edit command to the keys file.
+*/
+#endif
+static void
+keyedit (file)
+char *file;
+{
+    Reg1 char *cp;
+
+    cp = append ("edit ", file);
+    writekeys (CCCMD, cp, CCRETURN);
+    sfree (cp);
+}
+
+#ifdef COMMENT
+/*
 void
 main1 (argc, argv)
     int     argc;
@@ -314,7 +334,7 @@ Replay file \"%s\" was made by a different type of terminal.", inpfname);
     infoinit ();
 
     if (!replaying && curarg < argc && *argv[curarg] != '\0') Block {
-	static void keyedit ();
+	/*static void keyedit (); */
 	Block {
 	    Reg1 char *cp;
 	    extern char *getenv ();
@@ -341,25 +361,6 @@ Replay file \"%s\" was made by a different type of terminal.", inpfname);
     return;
 }
 
-#ifdef COMMENT
-/*
-static void
-keyedit (file)
-    char   *file;
-.
-    Write out an edit command to the keys file.
-*/
-#endif
-static void
-keyedit (file)
-char *file;
-{
-    Reg1 char *cp;
-
-    cp = append ("edit ", file);
-    writekeys (CCCMD, cp, CCRETURN);
-    sfree (cp);
-}
 
 #ifdef COMMENT
 /*

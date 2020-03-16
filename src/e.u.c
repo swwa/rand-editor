@@ -341,7 +341,7 @@ editit:
 #endif LMCTRAK
     if (puflg) {
 	if (newfn == OLDLFILE)
-	    getline (-1);   /* so that the last line modified will show up */
+	    legetline (-1);   /* so that the last line modified will show up */
 	putupwin ();
     }
     limitcursor ();

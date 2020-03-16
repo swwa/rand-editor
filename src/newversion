@@ -5,5 +5,5 @@ string1="made in `pwd` by `whoami`"
 
 echo "short revision = -19;" > $ver
 echo 'char verstr[] = "\' >> $ver
-echo "$string0"'\n'\\ >> $ver
-echo "$string1"'\n";' >> $ver
+echo "$string0"'\' >> $ver
+echo "$string1"'";' >> $ver

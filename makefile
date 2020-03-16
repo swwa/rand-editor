@@ -6,7 +6,8 @@
 #
 CC      = gcc
 DFS     = -DUNIXV7 -DTERMCAP -DSYSIII -DNOSOBUF
-CCF     = -g -O -traditional
+#CCF     = -g -O -traditional-cpp
+CCF     = -g -O2
 LDF     = -g
 LIBC    = -lc -lbsd
 RANLIB  = ranlib

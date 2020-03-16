@@ -34,6 +34,12 @@ extern void doexec ();
 
 extern int alarmproc ();
 
+static execabortmesg ();
+static noexecmesg ();
+static nopipemesg ();
+static noforkmesg ();
+static Cmdret urunlines ();
+
 #ifdef COMMENT
 /*
 Cmdret
@@ -226,7 +232,7 @@ filtlines (whichfilter, from, number, puflg, closeflg)
     Flag    closeflg;
 .
     Called by filter() and filtmark().
-    Prepare for and call to runlines().
+    Prepare for and call to urunlines().
 */
 #endif
 Cmdret
@@ -265,7 +271,7 @@ Flag    closeflg;
     mesg (TELALL + 2, cmdname, "ing.  Please wait.");
     d_put (0);
     loopflags.beep = YES;
-    return runlines (filters[whichfilter], filterpaths[whichfilter],
+    return urunlines (filters[whichfilter], filterpaths[whichfilter],
 		     args, from, number, QADJUST, puflg, closeflg, YES);
 }
 
@@ -330,7 +336,7 @@ Short cmdval;
 #endif
 	getpath ("sh", &shpath, NO);
     shargs[2] = cp;
-    retval = runlines (cmdval == CMDRUN ? "run" : "feed",
+    retval = urunlines (cmdval == CMDRUN ? "run" : "feed",
 		       shpath, shargs, stline, nmlines,
 		       QRUN, !moved, cmdval == CMDRUN, NO);
     if (moved)
@@ -345,7 +351,7 @@ Flag execfailed;
 #ifdef COMMENT
 /*
 Cmdret
-runlines (funcnm, progpath, args, from, number, iqbuf, puflg, closeflg, safe)
+urunlines (funcnm, progpath, args, from, number, iqbuf, puflg, closeflg, safe)
     char *funcnm;
     char   *progpath;
     char   *args[];
@@ -375,7 +381,7 @@ runlines (funcnm, progpath, args, from, number, iqbuf, puflg, closeflg, safe)
 #endif
 static
 Cmdret
-runlines (funcnm, progpath, args, from, number, iqbuf, puflg, closeflg, safe)
+urunlines (funcnm, progpath, args, from, number, iqbuf, puflg, closeflg, safe)
 char *funcnm;
 char   *progpath;
 char  **args;
@@ -408,7 +414,7 @@ Flag    safe;       /* OK for program to write directly on changes file */
     /* we must do it now, not after we have written onto the end of the
     /* changes file or the new stuff might get clobbered with zeros
     /**/
-    getline (-1);   /* flush so that file will be its full size */
+    legetline (-1);   /* flush so that file will be its full size */
     ff_flush (la_chgffs);
 
     chgend = ff_seek (la_chgffs, (long) 0, 2);
@@ -558,7 +564,7 @@ doexec (fd0, fd1, path, args)
     char *path;
     char *args[];
 .
-    Do the exec for runlines().
+    Do the exec for urunlines().
 */
 #endif
 void
@@ -753,7 +759,7 @@ Flag    puflg;          /* putup when done */
 	return YES;
     }
 
-    getline (-1);
+    legetline (-1);
     if ((endgap = from - (lsize = la_lsize (curlas))) > 0) {
 	if (!extend (endgap)) {
 	    mesg (ERRALL + 1, "Can't extend the file");
